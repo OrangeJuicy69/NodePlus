@@ -8,22 +8,28 @@
 ├── pnpm-lock.yaml
 ├── public
 │   ├── favicon.svg
-│   └── icons.svg
+│   ├── icons.svg
+│   └── node_ui.png
 ├── README.md
 ├── src
 │   ├── assets
 │   │   └── vite.svg
-│   ├── basicnode.css
-│   ├── connections.jsx
+│   ├── css
+│   │   └── csscolor
+│   │       ├── basicnode.css
+│   │       └── colorspalett.css
 │   ├── data.json
-│   ├── export-json.jsx
-│   ├── import-json.jsx
 │   ├── index.css
+│   ├── in-export
+│   │   ├── export-json.jsx
+│   │   └── import-json.jsx
 │   ├── main.jsx
-│   ├── newnode.jsx
-│   ├── node.jsx
-│   └── sidepanel.jsx
+│   └── node
+│       ├── connections.jsx
+│       ├── newnode.jsx
+│       ├── node.jsx
+│       └── sidepanel.jsx
 ├── struktur.txt
 └── vite.config.js
 
-5 directories, 22 files
+9 directories, 24 files
