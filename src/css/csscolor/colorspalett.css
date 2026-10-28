@@ -1,0 +1,46 @@
+/* not active yet, but will be used in future for Ui Mode and better color management */
+/*All colors of the Webapp is here(In all other Css files, there are no colors just custom properties (variables)*/ 
+
+:root {
+    /*prime color for nodes and background*/
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+
+    /*prime-Hover color for nodes and background*/
+    --primary-color-hover: #2980b9;
+    --secondary-color-hover: #27ae60;
+
+    /*Color for Backround, Text, Border and accent*/
+    --color-bg: #f5f5f5;
+    --color-text: #ffffff;
+    --color-accent: #e74c3c;
+    --color-border: #dcdcdc;
+
+    /*info color*/
+    --color-success: #27ae60;
+    --color-warning: #f39c12;
+    --color-error: #e74c3c;
+    --color-info: #3498db;
+
+    /*Status Color of the Node*/
+    --status-color-closed: #A32D2D;
+    --status-color-open: #ffee00ef;
+    --status-color-in-progress: #00fc2a;
+    --status-color-dod: #ff5e00;
+    --status-color-done: #0004ff;
+
+     /*Status-Hover Color of the Node*/
+    --status-color-closed-hover: #ff0000;
+    --status-color-open-hover: #ffee00ef;
+    --status-color-in-progress-hover: #00fc2a;
+    --status-color-dod-hover: #ff5e00;
+    --status-color-done-hover: #0004ff;
+
+    /*Status-bar-color*/
+    --status-bar-1: #00fc2a;
+    --status-bar-2: #fbff00;
+    --status-bar-3: #A32D2D;
+   
+
+    
+}
