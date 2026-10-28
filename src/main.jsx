@@ -1,13 +1,13 @@
-import { StrictMode, useState, useEffect } from 'react'
+import { StrictMode, useEffect, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import { Node } from './node.jsx'
-import { NewNode } from './newnode.jsx'
-import { Sidepanel } from './sidepanel.jsx'
-import { Connections } from './connections.jsx'
-import defaultNodes from './data.json' 
-import { ExportJSON } from './export-json.jsx'
-import { ImportJSON } from './import-json.jsx'
+import { Connections } from './node/connections'
+import { Node } from './node/node'
+import { NewNode } from './node/newnode'
+import { Sidepanel } from './node/sidepanel'
+import defaultNodes from './data.json'
+import { ExportJSON } from './in-export/export-json'
+import { ImportJSON } from './in-export/import-json'
 
 const App = () => {
  //Von hier gemacht mit KI (local Storage) (zeile 14 bis 39) 
