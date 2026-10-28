@@ -1,146 +1,192 @@
 # DarkPurpleNote (NodePlus)
 >This app is being restructured
 
-Entwickelt von [OrangeJuicy69](https://github.com/OrangeJuicy69)
+Developed by [OrangeJuicy69](https://github.com/OrangeJuicy69)
 
-Eine eigene Notiz-App, um die Erfolge eines abgeschlossenen Projekts zu dokumentieren. Die Notizen werden als Nodes (Knoten) dargestellt, die über Linien miteinander verbunden sind.
-![Screenshot von der aktuellen Node UI](/public/node_ui.png)
+A dedicated note-taking app for documenting the achievements of a completed project. The notes are represented as nodes, which are connected to one another by lines.
+
+## Introduction to the app
+
+![Screenshot of the current Node UI](/public/node_ui.png)
+
+When you press the "+" on the Node, it will open the node so you can see all the infos form the note
+
+![Screenshot of the open Node](/public/opennode.png)
+
+Also you can click on the node (open or not) to access the sidepanel
+
+![Screenshot of the open Node](/public/sidepanel-node.png)
+
+You can also import and export the data form the Nodes (Only Json see section)
+- [Import and Export](#import-and-export)
+![Screenshot of the current Node UI](/public/import.png)
+![Screenshot of the current Node UI](/public/export.png)
+
+
 > [!NOTE]
-> Diese Webapp ist noch in Bearbeitung. Fehler und Bugs sind zu erwarten.
+> This Webapp is still under development . Errors and bugs are to be expected.
 
 > [!TIP]
-> Lies die Installationsanleitung genau durch, um Fehler zu vermeiden.
+> Read the installation instructions carefully to avoid errors.
 
 > [!IMPORTANT]
-> Das Projekt darf als Vorlage für eigene Projekte verwendet werden.
+> This Project can be used for a privat project .
 
 > [!WARNING]
-> Bei Verwendung bitte **OrangeJuicy69** verlinken.
+> When you using it please link **OrangeJuicy69**.
+
 
 ## Inhalt
 
-- [Voraussetzungen](#voraussetzungen)
+- [Prerequisites](#Prerequisites)
 - [Installation](#installation)
-- [App starten](#app-starten)
-- [Verwendung](#verwendung)
-- [Import und Export](#import-und-export)
-- [Projektstruktur](#projektstruktur)
-- [Geplante Updates](#geplante-updates)
+- [App start](#app-start)
+- [Use](#use)
+- [Import and Export](#import-and-export)
+- [Project structure](#ProjectStructure)
+- [Planned Updates](#Planned-Updates)
 - [Links](#links)
 
-## Voraussetzungen
+## Prerequisites
 
 - [Node.js](https://nodejs.org/en/download) (LTS-Version)
-- [pnpm](https://pnpm.io/installation) (empfohlen, das Projekt enthält eine `pnpm-lock.yaml`)
-- zusätzlich [Git](https://git-scm.com/)
+- [pnpm](https://pnpm.io/installation) (recommended, the project includes a `pnpm-lock.yaml`)
 
-pnpm installierst man mit:
-
-## Installation
+## Installation and App Start (3 steps)
+> Only the setup of the webapp without git pull and so on
 
 ```bash
-git clone https://github.com/OrangeJuicy69/DarkPurpleNote.git
-cd DarkPurpleNote
+cd NodePlus
 pnpm install
 ```
-
-Aktuelle Änderungen holst du später mit:
-
-```bash
-git pull
-pnpm install
+>starts a local server
+```
+pnpm run start
 ```
 
+
+## App start (Explanation of everything it does )
+>for basic setup and start go to `Installation and App Start (3 steps)`
+
+Start the local development server with:
+
+> Development mode
+> Use it locally while developing and testing. Never use it in production
 ```bash
-pnpm install
+pnpm run dev 
 ```
-
-## App starten
-
-Starte den lokalen Entwicklungsserver mit:
-
+> or use it on servers, in deployments and to test the final production behavior locally
 ```bash
-pnpm dev
+pnpm run start 
 ```
+The Webapp can now be enternd in the browser  (by default its`http://localhost:5173`).
 
-Mit npm lautet der Befehl `npm run dev`.
+## Use
 
-Die App ist danach im Browser unter der in der Konsole angezeigten Adresse erreichbar (standardmäßig `http://localhost:5173`).
+All the data for the Nodes can be found an changed in the following file `src/data.json`.
 
-## Verwendung
+- Every Text,  that is displayed in the Node, can be found in the `data.json file`.
+- For a new Node, you can add a new section in the `data.json`.
+- You enter the position, requirements, and status manually into the `data.json`.
 
-Alle Daten der Nodes stehen in der Datei `src/data/data.json`.
-
-- Alle Texte, die in einem Node angezeigt werden, stehen ebenfalls in dieser Datei.
-- Für einen neuen Node fügst du in der `data.json` einen neuen Abschnitt hinzu.
-- Position, Voraussetzungen und Status trägst du manuell in der `data.json` ein.
-
-Den genauen Aufbau der JSON-Datei und was wohin gehört, findest du in [docs/JsonSetup.md](docs/JsonSetup.md).
+If you dont know how the `data.json` structure works, you can go to this file for more infos  [JSONSetup/JsonSetup.md](JSONSetup/JsonSetup.md).
 
 ## Import und Export
 
-- **Export:** Mit dem Button **Export JSON** lädst du das aktuelle JSON herunter. Die Datei enthält eine Kopie der Daten, die im Projekt verwendet werden.
-- **Import:** Mit dem Import kannst du ein JSON vorübergehend laden. Es werden nur JSON-Dateien akzeptiert, die den Anforderungen für einen vollständigen Node entsprechen (siehe [docs/JsonSetup.md](docs/JsonSetup.md)).
+- **Export:** With the **Export JSON** you can dowload a copy of the `data.json`. The file contains a copy of the data used in the project.
+- **Import:** With the **Import JSON** you can import a `json` which will still be there and will be loaded even after reloading of the website. Please pay attention to the requirements for the `data.json` (see here [JSONSetup/JsonSetup.md](JSONSetup/JsonSetup.md)).
 
-> [!TIP]
-> Wenn nach dem Import keine Änderungen sichtbar sind, öffne die Browser-Konsole (Taste `F12`) und prüfe dort die Fehlermeldung.
+> [!NOTE]
 
-## Projektstruktur
+##Troubleshooting
+
+> If you dont see any changes after the import , open the browser-console (key `F12`) and check the error message and logs there.
+
+There are right now 5 console alerts
+#console error
+ > console.error `console.error("JSON-Parse-missing:", err);`
+ > console.error `console.error("check *import-json.jsx* if the JSON dont work")`
+ > console.error `console.error("ImportJSON: Prop onImport missing.");`
+
+ #console alert
+ > alert `alert("Invalid format: The file must contain an array of nodes.");`
+ > alert  `alert("The file is not valid JSON.");`
+
+
+
+
+## Project structure
 
 ```text
-DarkPurpleNote/
-├── JsonSetup/
-│   └── JsonSetup.md        # Aufbau des JSON und was wohin gehört
-├── public/
-│   ├── favicon.svg
-│   ├── icons.svg
-│   └── node_ui.png
-├── src/
-│   ├── Node.jsx        # Funktionen der Nodes
-│   ├── NewNode.jsx     # Neue Nodes hinzufügen (experimentell)
-│   ├── Connections.jsx # Verbindungslinien zwischen den Nodes
-│   ├── SidePanel.jsx   # Seitenpanel der Nodes
-│   ├── ExportJson.jsx  # Export der Nodes als JSON
-│   ├── ImportJson.jsx  # Import der Nodes aus JSON
-│   ├── index.css       # Globales Styling
-│   ├── basicnode.css   # Styling des Node-Systems
-│   ├── data.json       # Werte der Nodes
-│   └── main.jsx            # Fügt alle Komponenten zusammen und rendert sie in #root
-├── .gitignore
 ├── eslint.config.js
-├── index.html              # Einstiegsseite der Webapp
+├── .gitignore
+├── index.html                  # Landing page of the web app
+├── JsonSetup
+│   └── JsonSetup.md            # Structure of the JSON and where everything goes
 ├── package.json
 ├── pnpm-lock.yaml
+├── public
+│   ├── export.png              # Readme node picture for export button
+│   ├── favicon.svg
+│   ├── icons.svg
+│   ├── import.png              # Readme node picture for import button
+│   ├── node_ui.png             # Readme node picture
+│   ├── opennode.png            # Readme node picture for opennode
+│   └── sidepanel-node.png      # Readme node picture for sidepanel
 ├── README.md
+├── src
+│   ├── assets
+│   │   └── vite.svg
+│   ├── css
+│   │   └── csscolor
+│   │       ├── basicnode.css   # Styling des Node-Systems
+│   │       └── colorspalett.css
+│   ├── data.json               # Values of the Nodes
+│   ├── index.css               # Global Styling
+│   ├── in-export
+│   │   ├── export-json.jsx     # Exports the Nodes into a JSON
+│   │   └── import-json.jsx     # Import  Nodes from JSON
+│   ├── main.jsx                # Combines all components and renders them into #root 
+│   └── node
+│       ├── connections.jsx     # Connecting lines between the nodes
+│       ├── newnode.jsx         # Add new Node (experimentell (does not work rn))
+│       ├── node.jsx            # Functions of the nodes
+│       └── sidepanel.jsx       # Sitenpanel for Nodes infos
+├── struktur.txt                # struktur of the project
 └── vite.config.js
 ```
+>in the file struktur.txt you can find the Project structure without any description
 
-## Geplante Updates
 
-- [x] Export-Funktion
-- [x] Import-Funktion
-- [x] Neue Node-UI
-- [ ] Neue Verbindungslinien
-- [ ] Allgemeine UI der Webapp
+## Upcomming Updates
 
-## Ideen für die Zukunft
+- [x] Export-function
+- [x] Import-function
+- [x] New Node-UI
+- [x] New Connecting lines
+- [x] Makeover project structure
+- [x] Changing everything to english (ui, readme, commits and comments)
+- [ ] General UI of the web app
+
+
+## Ideas for the future
 
 - [ ] Checkiste/To-Do Liste
-- [ ] Hyperlinks in Node
-- [ ] Sidepanle neu aufbauen von Grund
+- [ ] Hyperlinks inside of node
+- [ ] Rebuild of the sidepanel 
 - [ ] Dark Mode/ Light Mode
-- [ ] Unterschiednliche Nodes
-- [ ] Eigende Ui Farbe Wählen
+- [ ] Various nodes to choose from
+- [ ] Choose Your Own UI Color
 - [ ] Backend 
-- [ ] Kategorisieren
-- [ ] Dateinen anhängen in Nodes
+- [ ] Categorize
+- [ ] Attaching files in nodes
 - [ ] Workspace
-- [ ] Nodes Grössen Verändern
-- [ ] Rein raus Zoomen im Workspace
-- [ ] Login 
+- [ ] Change nodes size
+- [ ] Zooming in and out in the workspace
+- [ ] Login page 
 
 ## Links
 
 - [OrangeJuicy69 auf GitHub](https://github.com/OrangeJuicy69)
 - [Projekt-Repository](https://github.com/OrangeJuicy69/DarkPurpleNote/)
-- [pnpm: Installation](https://pnpm.io/installation) und [pnpm: FAQ](https://pnpm.io/faq)
+- [pnpm: Installation](https://pnpm.io/installation) and [pnpm: FAQ](https://pnpm.io/faq)
