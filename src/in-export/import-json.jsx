@@ -14,19 +14,19 @@ export const ImportJSON = ({ onImport }) => {
       const text = await file.text();
       parsed = JSON.parse(text);
     } catch (err) {
-      console.error("JSON-Parse-Fehler:", err);
-      alert("Die Datei ist kein gültiges JSON.");
+      console.error("JSON-Parse-missing:", err);
+      alert("The file is not valid JSON.");
       console.error("check *import-json.jsx* if the JSON dont work")
       return;
     }
 
     if (!Array.isArray(parsed)) {
-      alert("Ungültiges Format: Die Datei muss ein Array von Nodes enthalten.");
+      alert("Invalid format: The file must contain an array of nodes.");
       return;
     }
 
     if (typeof onImport !== "function") {
-      console.error("ImportJSON: Prop onImport fehlt.");
+      console.error("ImportJSON: Prop onImport missing.");
       
       return;
     }
