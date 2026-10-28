@@ -19,6 +19,7 @@ Also you can click on the node (open or not) to access the sidepanel
 
 You can also import and export the data form the Nodes (Only Json see section)
 - [Import and Export](#import-and-export)
+
 ![Screenshot of the current Node UI](/public/import.png)
 ![Screenshot of the current Node UI](/public/export.png)
 
@@ -36,15 +37,18 @@ You can also import and export the data form the Nodes (Only Json see section)
 > When you using it please link **OrangeJuicy69**.
 
 
-## Inhalt
+## Content
 
-- [Prerequisites](#Prerequisites)
-- [Installation](#installation)
-- [App start](#app-start)
+- [Introduction to the app](#introduction-to-the-app)
+- [Content](#content)
+- [Prerequisites](#content)
+- [Installation and App Start (3 steps)](#prerequisites)
+- [App start](#app-start-explanation-of-everything-it-does-)
 - [Use](#use)
-- [Import and Export](#import-and-export)
-- [Project structure](#ProjectStructure)
-- [Planned Updates](#Planned-Updates)
+- [Import and Export](#import-und-export)
+- [Project structure](#project-structure)
+- [Upcomming Updates](#upcomming-updates)
+- [Ideas for the future](#ideas-for-the-future)
 - [Links](#links)
 
 ## Prerequisites
