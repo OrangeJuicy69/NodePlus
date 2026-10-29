@@ -74,7 +74,7 @@ const App = () => {
       </Workspace>
 
       
-      <NewNode />
+      {/* <NewNode /> */}
       <ExportJSON nodeList={nodeList} />
       <Sidepanel node={selectedNode} onClose={() => setSelectedId(null)} />
       <ImportJSON onImport={(importedNodes) => setNodeList(importedNodes)} />
