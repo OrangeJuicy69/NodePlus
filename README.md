@@ -27,7 +27,7 @@ Dark and Light Mode
 >Dark Button and Light Button
 
 ![Screenshot of the Dark Button](/public/dark-button.png)
-![Screenshot of the Light Button](/public/light-buton.png)
+![Screenshot of the Light Button](/public/light-button.png)
 
 
 Light Node Mode is now out!
