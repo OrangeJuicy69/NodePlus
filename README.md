@@ -23,6 +23,17 @@ You can also import and export the data form the Nodes (Only Json see section)
 ![Screenshot of the current Node UI](/public/import.png)
 ![Screenshot of the current Node UI](/public/export.png)
 
+Dark and Light Mode
+>Dark Button and Light Button
+
+![Screenshot of the Dark Button](/public/dark-button.png)
+![Screenshot of the Light Button](/public/light-buton.png)
+
+
+Light Node Mode is now out!
+
+![Screenshot of the light node](/public/dark-mode-node.png)
+
 
 > [!NOTE]
 > This Webapp is still under development . Errors and bugs are to be expected.
