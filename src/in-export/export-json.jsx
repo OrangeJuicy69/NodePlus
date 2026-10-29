@@ -20,7 +20,7 @@ export const ExportJSON = ({ nodeList = [] }) => {
 
   return (
     <div className="export-json-container">
-      <button id="export-json" onClick={handleExport}>
+      <button id="export-json" className="btn" onClick={handleExport}>
         Export JSON
       </button>
     </div>
