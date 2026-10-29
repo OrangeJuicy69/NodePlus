@@ -1,20 +1,75 @@
-/* not active yet, but will be used in future for Ui Mode and better color management */
-/*All colors of the Webapp is here(In all other Css files, there are no colors just custom properties (variables)*/ 
+/* All colors of the Webapp are here (in all other CSS files there are no colors, just custom properties/variables) */
 
-:root {
-    /*prime color for nodes and background*/
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
+
+:root[data-theme="dark"] {
+    /*prime color for nodes and background (Dark and light mode)*/
+    --dark-primary-color: #ff7b00; /*node prime(dark) color*/
+    --light-primary-color: #e8e8e8; /*node prime (light) color*/
+
+    /*workspace color*/
+    --workspace-bg-dark: #085274; /*workspace dark*/
+    --workspace-light: #ffffff; /*workspace light*/
 
     /*prime-Hover color for nodes and background*/
-    --primary-color-hover: #2980b9;
-    --secondary-color-hover: #27ae60;
+    --dark-primary-color-hover: #e97232bb;
+    --light-secondary-color-hover: #e8e8e8a8;
 
-    /*Color for Backround, Text, Border and accent*/
-    --color-bg: #f5f5f5;
-    --color-text: #ffffff;
-    --color-accent: #e74c3c;
-    --color-border: #dcdcdc;
+    /*Color for Background, Text, Border and accent*/
+    --color-bg: #0f2f3f;          /*node background-color*/
+    --color-text-dark: #050505;   /*node text dark color*/
+    --color-text-light: #ffffff;  /*node text light color*/
+    --color-border: #042433;      /*node border color*/
+
+    /*info color (status color for import and error logs and so on)*/
+    --color-success: #27ae60;
+    --color-warning: #f39c12;
+    --color-error: #e74c3c;
+    --color-info: #3498db;
+
+    /*Status Color of the Node (status from the node)*/
+    --status-color-closed: #A32D2D;        /*closed node*/
+    --status-color-open: #ffee00ef;        /*open node*/
+    --status-color-in-progress: #00fc2a;   /*in progress node*/
+    --status-color-dod: #ff5e00;           /*definition of done node*/
+    --status-color-done: #f700ff;          /*node done*/
+
+    /*Status-Hover Color of the Node (status hover from the node)*/
+    --status-color-closed-hover: #ff0000;
+    --status-color-open-hover: #ffee00ef;
+    --status-color-in-progress-hover: #00fc2a;
+    --status-color-dod-hover: #ff5e00;
+    --status-color-done-hover: #0004ff;
+
+    /*Status-bar-color (color to see how far you are in the task)*/
+    --status-bar-1: #00fc2a; /* begin of task 1/3*/
+    --status-bar-2: #fbff00; /* mid of task 2/3*/
+    --status-bar-3: #A32D2D; /* done of task 3/3*/
+
+    /*workspace, viewport and controls color*/
+    --viewport-bg: #1e1e1e;
+    --controls-text: #ffffff;
+    --controls-border: #444444;
+}
+
+
+:root[data-theme="light"] {
+    /*prime color for nodes and background (Dark and light mode)*/
+    --dark-primary-color: #727272;
+    --light-primary-color: #e8e8e8;
+
+    /*workspace color*/
+    --workspace-bg-dark: #ffffff;   /* workspace becomes white */
+    --workspace-light: #ffffff;
+
+    /*prime-Hover color for nodes and background*/
+    --dark-primary-color-hover: #e97232bb;
+    --light-secondary-color-hover: #e8e8e8a8;
+
+    /*Color for Background, Text, Border and accent*/
+    --color-bg: #666666;            /* node background */
+    --color-text-dark: #050505;
+    --color-text-light: #050505;    /* text on nodes becomes dark */
+    --color-border: #c4c4c4;        /* node border */
 
     /*info color*/
     --color-success: #27ae60;
@@ -27,9 +82,9 @@
     --status-color-open: #ffee00ef;
     --status-color-in-progress: #00fc2a;
     --status-color-dod: #ff5e00;
-    --status-color-done: #0004ff;
+    --status-color-done: #f700ff;
 
-     /*Status-Hover Color of the Node*/
+    /*Status-Hover Color of the Node*/
     --status-color-closed-hover: #ff0000;
     --status-color-open-hover: #ffee00ef;
     --status-color-in-progress-hover: #00fc2a;
@@ -40,7 +95,9 @@
     --status-bar-1: #00fc2a;
     --status-bar-2: #fbff00;
     --status-bar-3: #A32D2D;
-   
 
-    
+    /*workspace, viewport and controls color*/
+    --viewport-bg: #f5f5f5;         /* page background */
+    --controls-text: #050505;
+    --controls-border: #c4c4c4;
 }
