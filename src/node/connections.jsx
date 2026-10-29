@@ -77,7 +77,7 @@ export const Connections = ({ nodes, sizes }) => {
         <path
             d={d}
             fill="none"
-            stroke="#ff9100"
+            stroke="#3f3f3f"
             strokeWidth={2}
             strokeLinecap="round"
             strokeLinejoin="round"
